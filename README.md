@@ -18,14 +18,51 @@ O projeto inclui:
 
 ## 📋 Plano de Testes
 O **Plano de Testes completo** está disponível em:  
-➡️ [docs/TestPlan.md](./docs/TestPlan.md)
+➡️ Plano de testes.docx
 
 ---
 
 ## 📂 Estrutura do Repositório
-qa-desafio-tecnico/
-├─ README.md # visão geral do projeto
+# Estrutura de Diretórios — Projeto `qa-desafio-tecnico`
 
+```plaintext
+qa-desafio-tecnico/
+│
+├── api-testes/                 # Automação API
+│
+├── web-testes/                 # Automação Web (UI)
+│
+├── performance-testes/         # Automação de Performance
+│   ├── scripts/                # scripts K6
+│   │   ├── stress-test-normal.js          # PERF-001
+│   │   ├── stress-test-breakpoint.js      # PERF-002
+│   │
+│   ├── results/                # resultados brutos das execuções
+│   │   ├── stress-test-normal-result.txt
+│   │   ├── stress-test-normal-summary.json
+│   │   ├── stress-test-breakpoint-result.txt
+│   │   ├── stress-test-breakpoint-summary.json
+│   │
+│   ├── reports/                # relatórios interpretados
+│   │   ├── REPORT-PERF-001.md
+│   │   ├── REPORT-PERF-002.md
+│   │
+│   └── casos/                  # casos de teste em markdown
+│       ├── perf-stress-normal.md     # PERF-001
+│       ├── perf-stress-breakpoint.md # PERF-002
+│
+├── docs/                       # Documentação geral
+│   ├── Plano de Testes.docx
+│   │
+│   ├── Casos de teste/
+│   │   ├── api/
+│   │   ├── web/
+│   │ 
+│   │
+│   ├── Bugs encontrados/
+│   │
+│   └── Evidencias/
+```
 ---
 
 ## 🚀 Tecnologias e Ferramentas
@@ -35,3 +72,40 @@ qa-desafio-tecnico/
 - **Performance**: k6  
 
 ---
+
+## 📊 Relatórios de Automação API (Allure)
+
+Os testes de API possuem **relatórios visuais** com Allure.
+
+- Para gerar e visualizar localmente:
+```bash
+mvn clean test
+allure serve target/allure-results
+```
+
+- Os resultados brutos ficam em: qa-desafio-tecnico/api-testes/target/allure-results/
+
+- O relatório HTML será aberto automaticamente no navegador.
+
+Caso queira apenas gerar a pasta com o relatório:
+```bash
+allure generate target/allure-results -o target/allure-report
+```
+---
+
+## ⚡ Relatórios de Testes de Performance
+
+Os testes de performance foram executados com k6 e analisados a partir dos resultados obtidos.
+
+📍 **Caminho dos relatórios interpretados**:
+`qa-desafio-tecnico/performance-testes/reports/`
+
+**Resultados principais**:
+
+`REPORT-PERF-001.md`
+ → Endpoint `/posts` suportou 1000 usuários simultâneos dentro dos critérios de desempenho.
+
+`REPORT-PERF-002.md`
+ → O ponto de falha foi identificado em 2000 VUs.
+
+📌 **Conclusão**: recomenda-se considerar 1000 VUs como limite seguro para este endpoint.
