@@ -91,6 +91,4 @@ Este relatório apresenta as atividades realizadas durante o desafio técnico, c
 - Identificação de um **bug crítico na aplicação web** e documentação adequada do mesmo.  
 - A automação foi estruturada de forma escalável (**Page Objects, RestAssured, Allure Reports, K6**).  
 
-➡️ Este conjunto de entregas demonstra **cobertura ampla de QA**, envolvendo desde a análise manual até a automação e performance, seguindo boas práticas de documentação e versionamento.
-
 ---
