@@ -22,6 +22,12 @@ O **Plano de Testes completo** está disponível em:
 
 ---
 
+## 📑 Relatório Final
+Este relatório apresenta as atividades realizadas durante o desafio técnico, contemplando **testes de API (DummyJSON)**, **testes Web (Automation Testing Demo)** e **testes de performance (JSONPlaceholder)**.  
+➡️ Relatório Final.md
+
+---
+
 ## 📂 Estrutura do Repositório
 # Estrutura de Diretórios — Projeto `qa-desafio-tecnico`
 
@@ -53,11 +59,11 @@ qa-desafio-tecnico/
 │
 ├── docs/                       # Documentação geral
 │   ├── Plano de Testes.docx
-│   │
+│   ├── Relatório Final.md
 │   ├── Casos de teste/
 │   │   ├── api/
 │   │   ├── web/
-│   │ 
+│   |
 │   │
 │   ├── Bugs encontrados/
 │   │
