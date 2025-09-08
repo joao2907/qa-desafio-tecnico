@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UserUpdateResponse",
+  "type": "object",
+  "properties": {
+    "id": { "type": "integer" },
+    "firstName": { "type": "string" },
+    "lastName": { "type": "string" },
+    "maidenName": { "type": "string" },
+    "age": { "type": "integer" },
+    "gender": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "phone": { "type": "string" },
+    "username": { "type": "string" },
+    "password": { "type": "string" },
+    "birthDate": { "type": "string" },
+    "image": { "type": "string", "format": "uri" },
+    "bloodGroup": { "type": "string" },
+    "height": { "type": "number" },
+    "weight": { "type": "number" },
+    "eyeColor": { "type": "string" },
+    "hair": {
+      "type": "object",
+      "properties": {
+        "color": { "type": "string" },
+        "type": { "type": "string" }
+      },
+      "required": ["color", "type"]
+    },
+    "ip": { "type": "string" },
+    "address": { "type": "object" },
+    "macAddress": { "type": "string" },
+    "university": { "type": "string" },
+    "bank": { "type": "object" },
+    "company": { "type": "object" },
+    "ein": { "type": "string" },
+    "ssn": { "type": "string" },
+    "userAgent": { "type": "string" }
+  },
+  "required": [
+    "id", "firstName", "lastName", "age", "gender",
+    "email", "username", "password"
+  ]
+}

@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"ea3d8bf25d53c748c7dd66fd32620e75","name":"com.dummyjson.api.users.UsersTest","statistic":{"failed":0,"broken":0,"skipped":0,"passed":10,"unknown":0,"total":10}},{"uid":"04e7f88c1d9adefd8990087d8ee848c2","name":"com.dummyjson.api.products.ProductsTest","statistic":{"failed":0,"broken":0,"skipped":0,"passed":5,"unknown":0,"total":5}}]}
